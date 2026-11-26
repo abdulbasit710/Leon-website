@@ -94,9 +94,9 @@ export default function App() {
         <div className="header-brand-row">
           <div className="header-social" aria-label="Social profiles">
             <span className="social-label">FOLLOW THE STORY</span>
-            <span className="social-icon" title="Facebook profile link pending" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.7 21v-8.2h2.8l.4-3.2h-3.2v-2c0-.9.3-1.5 1.6-1.5H17V3.2c-.3 0-1.4-.2-2.6-.2-2.7 0-4.5 1.6-4.5 4.6v2H7v3.2h2.9V21h3.8Z"/></svg></span>
-            <span className="social-icon" title="Instagram profile link pending" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle className="solid" cx="17.5" cy="6.5" r="1"/></svg></span>
-            <span className="social-icon" title="X profile link pending" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h3.5L20 21h-3.5L4 3Zm16 0L4 21"/></svg></span>
+            <a className="social-icon" href="https://www.facebook.com/author.leon.parrish/" target="_blank" rel="noopener noreferrer" title="Leon Parrish on Facebook" aria-label="Leon Parrish on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.7 21v-8.2h2.8l.4-3.2h-3.2v-2c0-.9.3-1.5 1.6-1.5H17V3.2c-.3 0-1.4-.2-2.6-.2-2.7 0-4.5 1.6-4.5 4.6v2H7v3.2h2.9V21h3.8Z"/></svg></a>
+            <a className="social-icon" href="https://www.instagram.com/author_leonparrish/" target="_blank" rel="noopener noreferrer" title="Leon Parrish on Instagram" aria-label="Leon Parrish on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle className="solid" cx="17.5" cy="6.5" r="1"/></svg></a>
+            <a className="social-icon social-icon-threads" href="https://www.threads.com/@lmdparrish" target="_blank" rel="noopener noreferrer" title="Leon Parrish on Threads" aria-label="Leon Parrish on Threads"><span aria-hidden="true">@</span></a>
           </div>
           <Brand />
           <span className="header-aside header-aside-right">Yorkshire born<br />A story worth telling</span>

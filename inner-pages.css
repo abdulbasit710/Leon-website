@@ -16,6 +16,3 @@
 .books-page-hero .inner-hero-image{transform:none}.book-feature-art img{transform:none}.book-feature-art img:hover{transform:translateY(-10px)}.inner-hero-cta{margin:0 0 28px}.book-feature-copy .actions{flex-wrap:wrap;gap:20px}.book-feature-copy .button{min-width:195px}
 
 .inner-hero:before{display:none}.contact-detail-line{width:20px;height:1px;background:var(--gold);flex:none;margin-top:13px}.book-tab-panel h3{margin-top:20px}
-
-.business-photo{max-width:860px;margin:55px auto 0;border:1px solid #776446;padding:10px;background:#24261d;box-shadow:0 24px 40px #0007}.business-photo img{display:block;width:100%;height:auto;max-height:580px;object-fit:contain}.business-photo figcaption{padding:12px 5px 3px;text-align:center;color:var(--gold2);font:italic 19px var(--serif)}.business-history{margin-top:35px}@media(max-width:700px){.business-photo{margin-top:38px}.business-photo img{max-height:none}}
-
