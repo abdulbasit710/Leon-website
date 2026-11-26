@@ -16,3 +16,5 @@
 .books-page-hero .inner-hero-image{transform:none}.book-feature-art img{transform:none}.book-feature-art img:hover{transform:translateY(-10px)}.inner-hero-cta{margin:0 0 28px}.book-feature-copy .actions{flex-wrap:wrap;gap:20px}.book-feature-copy .button{min-width:195px}
 
 .inner-hero:before{display:none}.contact-detail-line{width:20px;height:1px;background:var(--gold);flex:none;margin-top:13px}.book-tab-panel h3{margin-top:20px}
+
+.business-intro .eyebrow{font-size:12px!important;letter-spacing:.22em}.business-intro h2{font-size:clamp(48px,4.8vw,74px)}.business-kicker{font-size:18px!important;letter-spacing:.14em;line-height:1.2;margin-bottom:22px!important}.business-intro>div:last-child p:not(.business-kicker){font-size:16px;line-height:1.7}@media(max-width:700px){.business-intro h2{font-size:clamp(48px,12vw,64px)}.business-intro .eyebrow{font-size:10px!important}.business-kicker{font-size:16px!important}.business-intro>div:last-child p:not(.business-kicker){font-size:15px}}
