@@ -1,5 +1,6 @@
 ﻿import React, { useEffect, useState } from 'react';
 import './styles.css';
+import './loader.css';
 import { InnerPage } from './InnerPages.jsx';
 
 const A = '/assets/';
@@ -16,6 +17,38 @@ function Brand({ footer = false }) {
   return <a className={`brand brand-image ${footer ? 'footer-brand' : ''}`} href="/" aria-label="Leon Parrish home">
     <img src={`${A}leon-parrish-logo.png`} alt="Leon Parrish author logo" />
   </a>;
+}
+
+function LogoLoader() {
+  const [phase, setPhase] = useState('show');
+
+  useEffect(() => {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const exitTimer = window.setTimeout(() => setPhase('exit'), reducedMotion ? 100 : 1200);
+    const finishTimer = window.setTimeout(() => setPhase('done'), reducedMotion ? 130 : 1720);
+    return () => {
+      window.clearTimeout(exitTimer);
+      window.clearTimeout(finishTimer);
+      document.body.style.overflow = previousOverflow;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (phase === 'done') document.body.style.overflow = '';
+  }, [phase]);
+
+  if (phase === 'done') return null;
+  return <div className={`logo-loader ${phase === 'exit' ? 'logo-loader-exit' : ''}`} role="status" aria-label="Loading Leon Parrish website">
+    <div className="loader-frame" aria-hidden="true"><span /><span /><span /><span /></div>
+    <div className="loader-center">
+      <div className="loader-emblem"><img src={`${A}leon-parrish-logo.png`} alt="Leon Parrish" /></div>
+      <div className="loader-rule" aria-hidden="true"><span /></div>
+      <p>A LIFE WELL LIVED. A STORY WORTH TELLING.</p>
+    </div>
+    <div className="loader-footer"><span>HUNSLET, LEEDS</span><span>EST. 1946</span></div>
+  </div>;
 }
 
 export default function App() {
@@ -53,6 +86,7 @@ export default function App() {
   }, []);
 
   return <>
+    <LogoLoader />
     <div className="scroll-progress" style={{ width: `${scrollProgress}%` }} aria-hidden="true" />
     <div className="topline"><span>Hunslet, Leeds &nbsp; · &nbsp; A story that began in 1946</span><span>From Hunslet, with love</span></div>
     <header className="site-header" id="home">
